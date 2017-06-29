@@ -540,10 +540,45 @@ header {
     height: 100%; }
     .perfil ul li:nth-child(1) {
       width: 60%; }
+      .perfil ul li:nth-child(1) .bg {
+        position: relative;
+        display: block;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        z-index: 15; }
+        .perfil ul li:nth-child(1) .bg img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 101%;
+          height: auto;
+          max-height: none;
+          max-width: none;
+          min-height: 100%;
+          min-width: 100%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          -o-object-fit: cover;
+          object-fit: cover; }
       .perfil ul li:nth-child(1) img {
         height: 100%; }
     .perfil ul li:nth-child(2) {
-      width: 40%; }
+      width: 40%;
+      background-color: #5d6b6c;
+      padding: 3%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .perfil ul li:nth-child(2) .flex-center p {
+        color: white;
+        font-size: 17px;
+        line-height: 22px;
+        text-align: justify;
+        font-family: 'OpenSansLight'; }
 
 /****** HABILIDADES */
 .habilidades .ctn-habl {

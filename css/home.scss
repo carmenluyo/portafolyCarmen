@@ -413,12 +413,46 @@ header {
       height: 100%;
       &:nth-child(1) {
         width: 60%;
+        .bg {
+          position: relative;
+          display: block;
+          top: 0;
+          width: 100%;
+          left: 0;
+          height: 100%;
+          z-index: 15;
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 101%;
+            height: auto;
+            max-height: none;
+            max-width: none;
+            min-height: 100%;
+            min-width: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+          }
+        }
         img {
           height: 100%;
         }
       }
       &:nth-child(2) {
         width: 40%;
+        background-color: #5d6b6c;
+        padding: 3%;
+        display: flex;
+        .flex-center {
+          p {
+          color: white;
+          font-size: 17px;
+          line-height: 22px;
+          text-align: justify;
+          font-family: 'OpenSansLight';
+          }
+        }
       }
     }
   }
