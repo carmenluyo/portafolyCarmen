@@ -1,96 +1,181 @@
 <!DOCTYPE>
 <html>
-
 	<head>
-
-		<title>Carmen Luyo</title>
+		<title> Carmenluyo </title>
 		<meta charset="utf-8">
+		<!-- Responsive -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- Responsiveness -->
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="icon" type="image/png" href="favicon/favicon-16x16.png">
-
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	</head>
-
-		<body>
-
-			
-			
-			<div class="container-fluid">
-				<!-- SECTION lANDING -->
-				<header id="scroll">
-					<nav class="navbar">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header"><h1 class="hidden-xs hidden-sm">Carmen Luyo</h1>
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="#portafolio">Portafolio</a></li>
-								<li><a href="#perfil">Perfil</a></li>
-								<li><a href="#servicios">Servicios</a></li>
-								<li><a href="#contactame">Contáctame</a></li>
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</nav>
-				</header>
-				<section class="bg-section bg-img-block" id="home">
-					<div class="shadow">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-12">
-									<!--<img src="img/dibujo.png" alt="" class="img-responsive">-->
-								</div>
-							</div>
-							<div class="main text-white text-center">
-								<!--<section class="cd-intro">-->
-								<h2 class="cd-headline clip text-center">
-									<span class="design">Yo desarrollo</span>
-									<span class="cd-words-wrapper" style="width: 383.724px; overflow: hidden;">
-										<b class="is-visible">creatividad</b>
-										<b class="is-hidden">Páginas Web</b>
-									</span>
-								</h2>
-								<!--</section> -->
-								<ul class="socialLinks">
-									<li>
-										<a href="https://pe.linkedin.com/in/carmenluyo" target="_blank">
-											<i class="fa fa-linkedin"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://es.pinterest.com/carmenluyorosal/" target="_blank">
-											<i class="fa fa-pinterest"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://github.com/carmenluyo" target="_blank">
-											<i class="fa fa-github"></i>
-										</a>
-									</li>
-								</ul>
-								<a href="#portfolio" class="btn-portfolio">Portafolio</a>
-								<a href="#about-me" class=" arrow btn-home"><i class="fa fa-angle-down"></i></a>  
-							</div>
-						</div>
+	<body>
+		<div id="fullpage">
+			<!-- HOME -->
+			<section class="bg-section home section" id="home">
+				<header>
+					<div class="widthWeb">
+		        <nav>
+		          <ul id="menu-main-menu" class="reset list-unstyled menu-gral">
+		          	<li><a href="#">Portafolio</a></li>
+								<li><a href="#">perfil</a></li>
+								<li><a href="#">Servicios</a></li>
+								<li><a href="#">Contactame</a></li>
+							</ul>               
+		        </nav>
+		      </div>
+					<div class="clear clr"></div>
+		  	</header>
+				<div class="shadow">
+					<div class="main info text-white text-center">
+						<!--<section class="cd-intro">-->
+						<h2 class="cd-headline clip text-center">
+							<span class="design">Yo desarrollo</span>
+							<span class="cd-words-wrapper" style="width: 383.724px; overflow: hidden;">
+								<b class="is-visible">creatividad</b>
+								<b class="is-hidden">Páginas Web</b>
+							</span>
+						</h2>
+						<!--</section> -->
+						<ul class="socialLinks">
+							<li>
+								<a href="https://pe.linkedin.com/in/carmenluyo" target="_blank">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://es.pinterest.com/carmenluyorosal/" target="_blank">
+									<i class="fa fa-pinterest"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/carmenluyo" target="_blank">
+									<i class="fa fa-github"></i>
+								</a>
+							</li>
+						</ul>
+						<a href="#portfolio" class="btn-portfolio">Portafolio</a>
+						<a href="#about-me" class=" arrow btn-home"><i class="fa fa-angle-down"></i></a>  
 					</div>
-				</section>
-			</div>
-
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-			<script src="javascripts/miscript.js"></script>
-			<script src="javascripts/modernizr.custom.64483.js"></script>
+				</div>
+			</section>
 		
-		</body>
-</html>	
+			<!-- PORTAFOLIO-->
 
+			<section class="section portafolio">
+        <ul class="reset items">
+          <li class="item">
+            <a style="background-image: url('images/portafolio-amiljpg');" class="thumb" href="http://www.proyectoamil.org">
+              <div class="caption">
+                  <span class="website">
+                    www.proyectoamil.com
+                    <span>PastPresentFuture</span>
+                  </span>
+                  <h3>Proyecto Amil</h3>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+              <a style="background-image: url('images/portafolio-2.jpg');" class="thumb" href="#">
+                  <div class="caption">
+                      <span class="website">
+                        www.marketcrates.com
+                        <span>PastPresentFuture</span>
+                      </span>
+                      <h3>Marketcrates</h3>
+                  </div>
+              </a>
+          </li>
+          <li class="item">
+              <a style="background-image: url('images/portolio-3.jpg');" class="thumb" href="http://juanleal.staging.wpengine.com/">
+                  <div class="caption">
+                      <span class="website">
+                        Juanleal.staging.wpengine.com
+                        <span>Tremgroup</span>
+                      </span>
+                      <h3>Juan Leal</h3>
+                  </div>
+              </a>
+          </li>
+          <li class="item">
+              <a style="background-image: url('images/portolio-4.jpg');" class="thumb" href="http://jeffwebsite.staging.wpengine.com/">
+                  <div class="caption">
+                      <span class="website">
+                         www.jeffwebsite.staging.wpengine.com
+                         <span>Tremgroup</span>
+                      </span>
+                      <h3> Jeff Miller</h3>
+                  </div>
+              </a>
+          </li>
+          <li class="item">
+              <a style="background-image: url('images/portolio-5.jpg');" class="thumb" href="http://www.87-park.com/">
+                  <div class="caption">
+                      <span class="website">
+                       	www.87-park.com
+                       	<span>Tremgroup</span>
+                      </span>
+                      <h3>87 park</h3>
+                  </div>
+              </a>
+          </li>
+          <li class="item">
+              <a style="background-image: url('images/portolio-6.jpg');" class="thumb" href="http://www.theaptteam.com/">
+                  <div class="caption">
+                      <span class="website">
+		                    www.theaptteam.com
+		                    <span>Tremgroup</span>
+                      </span>
+                      <h3>the Apt</h3>
+                  </div>
+              </a>
+          </li>
+          <li class="item">
+              <a class="thumb" href="#">
+                  <div class="caption">
+                      <span class="chevron right"></span>
+                      <h4>Ver mas</h4>
+                  </div>
+              </a>
+          </li>
+        </ul>
+      </section>
+
+			<section class="perfil section">
+				<ul>
+					<li>
+						<img src="images/carmen_luyo.jpg" alt="">
+					</li>
+					<li></li>
+				</ul>	
+			</section>
+
+			<section class="habilidades section">
+				<div class="ctn-habl">
+					<ul>
+						<li> <span class="firth"> Habilidades</span></li>
+						<li><a href="#"><span>Seo</span><img src="images/carmenluyo_seo.jpg" alt=""></a></li>
+						<li><a href="#"><span>Desarrollo Web </span><img src="images/carmenluyo_desarrolloweb.jpg" alt=""></a></li>
+						<li><a href="#"><span> Responsive</span><img src="images/carmenluyo_responsive.jpg" alt=""></a> </li>
+						<li><a href="#"><span>Quality Assurance </span><img src="images/carmenluyo_qa.jpg" alt=""></a></li>
+						<li><a href="#"><span>User experience</span><img src="images/carmenluyo_userexperience.jpg" alt=""></a></li>
+					</ul>
+				</div>
+
+			</section>
+
+			<section class="contact section">
+				
+			</section>
+			
+		</div>
+			
+			
+
+	  	<script src="js/jquery-3.1.0.min.js"></script>
+	  	<script src="js/jquery.fullPage.js"></script>
+	  	<script src="js/main.js"></script>
+	</body>
+</html>	
