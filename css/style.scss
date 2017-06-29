@@ -31,19 +31,20 @@
 
 
 @font-face {
-  font-family: 'AvenirLTStd-Roman';
-  src: url('../fonts/AvenirLTStd-Roman-webfont.eot');
-  src: url('../fonts/AvenirLTStd-Roman-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirLTStd-Roman.woff') format('woff'), url('../fonts/AvenirLTStd-Roman-webfont.ttf') format('truetype'), url('../fonts/AvenirLTStd-Roman-webfont.svg#OpenSansBold') format('svg');
-}
-@font-face {
-    font-family: 'DidotLTStd-Headline';
-    src: url('../fonts/DidotLTStd-Headline.eot?#iefix') format('embedded-opentype'), url('../fonts/DidotLTStd-Headline.otf') format('opentype'), url('../fonts/DidotLTStd-Headline.woff') format('woff'), url('../fonts/DidotLTStd-Headline.ttf') format('truetype'), url('../fonts/DidotLTStd-Headline.svg#DidotLTStd-Headline') format('svg');
+  font-family: 'SF-KingstonRegular';
+  src: url('../fonts/SF-Kingston-Regular.otf');
 }
 
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  min-height: 100%;
+}
+body{
+  position: relative;
+  background-color: transparent;
 }
 
 /** apariencia de los botones en safari - compatibilidad **/
@@ -228,6 +229,13 @@ button,
 img {
   max-width: 100%;
   height: auto;
+}
+
+.bg-section{
+  background-attachment: fixed; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 $colorweb:#008891; // celeste

@@ -8,8 +8,6 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
 /*** HOME ***/
 
 header {
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   position: absolute;
   left: 0;
@@ -37,6 +35,134 @@ header {
     }
   }
 }
+
+.home {
+  background-image: url(../images/carmenluyo.jpg);
+  .title-logo {
+    font-family: 'SF-KingstonRegular';
+  }
+  .shadow{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    .info {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 999;
+      padding: 0% 8%;
+
+      h1 {
+        font-size: 8em;
+        font-weight: 100;
+        color: white;
+      }
+
+      h2{
+        font-size: 3em;
+        color:#fff;
+        /*  Rotating Text */
+        .cd-words-wrapper {
+          display: inline-block;
+          position: relative;
+          b {
+            display: inline-block;
+            position: absolute;
+            white-space: nowrap;
+            left: 0;
+            top: 0;
+          }
+          b.is-visible {
+            position: relative;
+          }
+        }
+      }
+
+      .cd-headline.clip {
+        .cd-words-wrapper {
+          overflow: hidden;
+          vertical-align: top;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #fff;
+          }
+        }
+        b {
+          opacity: 0;
+        }
+        b.is-visible {
+          opacity: 1;
+        }
+      }
+      .btn-portfolio{
+        padding:14px 1.7%;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1em;
+        margin-bottom: 2%;
+        margin-top: 5%;
+        background-color: transparent;
+        border: 3px solid #fff;
+        &:hover{
+          color: white;
+          transition: 0.8s;
+          border: 3px solid $colorweb;
+          background-color: $colorweb;
+        }
+      }
+      /* BOTON HOME DIRIGE A PORTAFOLIO */
+      .btn-home{
+        display: block;
+        span{
+          color: white;
+          }
+        i{
+          font-size: 3em;
+          color: white;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.socialLinks{
+  list-style: none;
+  right: 44px;
+  top: 35%;
+  position: fixed;
+  z-index: 99;
+  li {
+    margin: 10px 0;
+    a i{
+      border-radius: 50%;
+      background-color:  #ffffff;
+      margin: 0 7px;
+      font-size: 26px;
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      line-height: 51px;
+      color:$colorweb;     
+      &:hover{
+        background-color: $colorweb-hover;
+        color: #ffffff;
+        transition: 1s;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   header {
     nav {
@@ -60,24 +186,7 @@ header {
 
 
 @media (min-width: 320px) {
-  .home {
-    background-image: url(../images/carmenluyo.jpg);
-    .info {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 999;
-      padding: 0 25px;
-    }
-  }
+
 }
 
 
@@ -86,182 +195,8 @@ header {
 }
 
 
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box; 
-}
-html,body{
-  height: 100%;
-  min-height: 100%;
-}
-body{
-  position: relative;
-  background-color: transparent;
-}
 
-a:active,
-a:hover,a:focus{
-  text-decoration: none;
-}
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-.container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0px; 
-    padding-right: 0px; 
-}
 
-/*nav-bar*/
-
-.nav>li>a:hover,
-.nav>li>a:focus{
-  text-decoration: none;
-  background-color: transparent;
-}
-#scroll {
-  width: 100%;
-  height: 80px;
-  background: transparent;
-  position: absolute;
-  z-index: 1;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  .navbar{
-    position: relative;
-    padding: 10px 4%;
-    height: 90px; 
-  }
-  .navbar-header h1{
-    display: none;
-  }
-  .nav {
-    li > a{
-    color: #fff;
-    letter-spacing: 2px;
-      &:hover{
-        color: $colorweb;
-        transition:0.4s;
-        background-color: transparent;
-      }
-    }
-  }
-   .navbar-right{
-    padding-top: 10px;
-  }
-}
-
-/* BOTON HOME DIRIGE A PORTAFOLIO */
-
-.btn-home{
-  display: block;
-  span{
-    color: white;
-    }
-  i{
-    font-size: 3em;
-    color: white;
-    display: block;
-  }
-}
-.shadow{
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%;
-}
-.bg-section{
-  background-attachment: fixed; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-ul.socialLinks{
-  list-style: none;
-  right: 44px;
-  top: 35%;
-  position: fixed;
-    z-index: 1000000000000000000000000;
-}
-ul.socialLinks li a i{
-  border-radius: 50%;
-  background-color:  #ffffff;
-  margin: 0 7px;
-  font-size: 26px;
-  display: inline-block;
-  width: 51px;
-  height: 51px;
-  line-height: 51px;
-  color:$colorweb
-}
-ul.socialLinks li{
-  margin: 10px 0;
-}
-ul.socialLinks li a i:hover{
-  background-color: $colorweb-hover;
-  color: #ffffff;
-  transition: 1s;
-}
-@media (max-width:640px){
-  ul.socialLinks li a{
-    display: none;
-  }
-}
-.main{
-  padding: 0% 8%;
-}
-.main h1{
-  font-size: 8em;
-  font-weight: 600;
-  font-weight: 600;
-  font-family: 'Josefin Sans', sans-serif;
-
-}
-.main h2{
-  font-size: 3em;
-  margin-top: 30%;
-}
-.main .btn-portfolio{
-  padding:14px 1.7%;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: 500;
-  line-height: 1em;
-  margin-bottom: 2%;
-  margin-top: 5%;
-  background-color: transparent;
-  border: 3px solid #fff;
-}
-.btn-portfolio:hover{
-    color: white;
-    transition: 0.8s;
-    border: 3px solid $colorweb;
-    background-color: $colorweb;
-}
-.navbar-nav>.active>a {
-  border-bottom: 3px solid #7FD9BA;
-}
-
-/*  Rotating Text */
-
-.cd-words-wrapper {
-  display: inline-block;
-  position: relative;
-}
-.cd-words-wrapper b {
-  display: inline-block;
-  position: absolute;
-  white-space: nowrap;
-  left: 0;
-  top: 0;
-}
-.cd-words-wrapper b.is-visible {
-  position: relative;
-}
 .no-js .cd-words-wrapper b {
   opacity: 0;
 }
@@ -269,32 +204,7 @@ ul.socialLinks li a i:hover{
   opacity: 1;
 }
 
-.cd-headline.clip span {
-  /* display: inline-block; */
-}
-.cd-headline.clip .cd-words-wrapper {
-  overflow: hidden;
-  vertical-align: top;
-}
-.cd-headline.clip .cd-words-wrapper::after {
-  /* line */
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background-color: #fff;
-}
-.cd-headline.clip b {
-  opacity: 0;
-}
-.cd-headline.clip b.is-visible {
-  opacity: 1;
-}
 
-
-///
 
 
 

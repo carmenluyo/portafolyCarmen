@@ -4,7 +4,6 @@
     function initialization(){
         $('#fullpage').fullpage({
             sectionsColor: [''],
-            anchors: ['welcome', 'portafolio', 'perfil','habilidades', 'contact'],
             menu: '#menu',
             slidesNavigation: true,
             loopHorizontal: false,

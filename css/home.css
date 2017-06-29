@@ -24,18 +24,20 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
   src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg"); }
 
 @font-face {
-  font-family: 'AvenirLTStd-Roman';
-  src: url("../fonts/AvenirLTStd-Roman-webfont.eot");
-  src: url("../fonts/AvenirLTStd-Roman-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirLTStd-Roman.woff") format("woff"), url("../fonts/AvenirLTStd-Roman-webfont.ttf") format("truetype"), url("../fonts/AvenirLTStd-Roman-webfont.svg#OpenSansBold") format("svg"); }
-
-@font-face {
-  font-family: 'DidotLTStd-Headline';
-  src: url("../fonts/DidotLTStd-Headline.eot?#iefix") format("embedded-opentype"), url("../fonts/DidotLTStd-Headline.otf") format("opentype"), url("../fonts/DidotLTStd-Headline.woff") format("woff"), url("../fonts/DidotLTStd-Headline.ttf") format("truetype"), url("../fonts/DidotLTStd-Headline.svg#DidotLTStd-Headline") format("svg"); }
+  font-family: 'SF-KingstonRegular';
+  src: url("../fonts/SF-Kingston-Regular.otf"); }
 
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  position: relative;
+  background-color: transparent; }
 
 /** apariencia de los botones en safari - compatibilidad **/
 /** clear **/
@@ -146,6 +148,12 @@ img {
   max-width: 100%;
   height: auto; }
 
+.bg-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center; }
+
 .container {
   max-width: 1350px;
   margin: 0 auto;
@@ -200,6 +208,113 @@ header {
     header nav ul li a:hover {
       color: #008891; }
 
+.home {
+  background-image: url(../images/carmenluyo.jpg); }
+  .home .title-logo {
+    font-family: 'SF-KingstonRegular'; }
+  .home .shadow {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%; }
+    .home .shadow .info {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 999;
+      padding: 0% 8%;
+      /* BOTON HOME DIRIGE A PORTAFOLIO */ }
+      .home .shadow .info h1 {
+        font-size: 8em;
+        font-weight: 100;
+        color: white; }
+      .home .shadow .info h2 {
+        font-size: 3em;
+        color: #fff;
+        /*  Rotating Text */ }
+        .home .shadow .info h2 .cd-words-wrapper {
+          display: inline-block;
+          position: relative; }
+          .home .shadow .info h2 .cd-words-wrapper b {
+            display: inline-block;
+            position: absolute;
+            white-space: nowrap;
+            left: 0;
+            top: 0; }
+          .home .shadow .info h2 .cd-words-wrapper b.is-visible {
+            position: relative; }
+      .home .shadow .info .cd-headline.clip .cd-words-wrapper {
+        overflow: hidden;
+        vertical-align: top; }
+        .home .shadow .info .cd-headline.clip .cd-words-wrapper:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background-color: #fff; }
+      .home .shadow .info .cd-headline.clip b {
+        opacity: 0; }
+      .home .shadow .info .cd-headline.clip b.is-visible {
+        opacity: 1; }
+      .home .shadow .info .btn-portfolio {
+        padding: 14px 1.7%;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1em;
+        margin-bottom: 2%;
+        margin-top: 5%;
+        background-color: transparent;
+        border: 3px solid #fff; }
+        .home .shadow .info .btn-portfolio:hover {
+          color: white;
+          -webkit-transition: 0.8s;
+          -o-transition: 0.8s;
+          transition: 0.8s;
+          border: 3px solid #008891;
+          background-color: #008891; }
+      .home .shadow .info .btn-home {
+        display: block; }
+        .home .shadow .info .btn-home span {
+          color: white; }
+        .home .shadow .info .btn-home i {
+          font-size: 3em;
+          color: white;
+          display: block; }
+
+.socialLinks {
+  list-style: none;
+  right: 44px;
+  top: 35%;
+  position: fixed;
+  z-index: 99; }
+  .socialLinks li {
+    margin: 10px 0; }
+    .socialLinks li a i {
+      border-radius: 50%;
+      background-color: #ffffff;
+      margin: 0 7px;
+      font-size: 26px;
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      line-height: 51px;
+      color: #008891; }
+      .socialLinks li a i:hover {
+        background-color: #222222;
+        color: #ffffff;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s; }
+
 @media only screen and (min-width: 768px) {
   header nav {
     position: absolute;
@@ -216,215 +331,10 @@ header {
       transition: all 0.5s ease-out; } }
 
 /*** MEDIA QUERIES ***/
-@media (min-width: 320px) {
-  .home {
-    background-image: url(../images/carmenluyo.jpg); }
-    .home .info {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 999;
-      padding: 0 25px; } }
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box; }
-
-html, body {
-  height: 100%;
-  min-height: 100%; }
-
-body {
-  position: relative;
-  background-color: transparent; }
-
-a:active,
-a:hover, a:focus {
-  text-decoration: none; }
-
-.row {
-  margin-left: 0;
-  margin-right: 0; }
-
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0px;
-  padding-right: 0px; }
-
-/*nav-bar*/
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: transparent; }
-
-#scroll {
-  width: 100%;
-  height: 80px;
-  background: transparent;
-  position: absolute;
-  z-index: 1;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-  #scroll .navbar {
-    position: relative;
-    padding: 10px 4%;
-    height: 90px; }
-  #scroll .navbar-header h1 {
-    display: none; }
-  #scroll .nav li > a {
-    color: #fff;
-    letter-spacing: 2px; }
-    #scroll .nav li > a:hover {
-      color: #008891;
-      -webkit-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s;
-      background-color: transparent; }
-  #scroll .navbar-right {
-    padding-top: 10px; }
-
-/* BOTON HOME DIRIGE A PORTAFOLIO */
-.btn-home {
-  display: block; }
-  .btn-home span {
-    color: white; }
-  .btn-home i {
-    font-size: 3em;
-    color: white;
-    display: block; }
-
-.shadow {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%; }
-
-.bg-section {
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center; }
-
-ul.socialLinks {
-  list-style: none;
-  right: 44px;
-  top: 35%;
-  position: fixed;
-  z-index: 1000000000000000000000000; }
-
-ul.socialLinks li a i {
-  border-radius: 50%;
-  background-color: #ffffff;
-  margin: 0 7px;
-  font-size: 26px;
-  display: inline-block;
-  width: 51px;
-  height: 51px;
-  line-height: 51px;
-  color: #008891; }
-
-ul.socialLinks li {
-  margin: 10px 0; }
-
-ul.socialLinks li a i:hover {
-  background-color: #222222;
-  color: #ffffff;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
-
-@media (max-width: 640px) {
-  ul.socialLinks li a {
-    display: none; } }
-
-.main {
-  padding: 0% 8%; }
-
-.main h1 {
-  font-size: 8em;
-  font-weight: 600;
-  font-weight: 600;
-  font-family: 'Josefin Sans', sans-serif; }
-
-.main h2 {
-  font-size: 3em;
-  margin-top: 30%; }
-
-.main .btn-portfolio {
-  padding: 14px 1.7%;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: 500;
-  line-height: 1em;
-  margin-bottom: 2%;
-  margin-top: 5%;
-  background-color: transparent;
-  border: 3px solid #fff; }
-
-.btn-portfolio:hover {
-  color: white;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-  border: 3px solid #008891;
-  background-color: #008891; }
-
-.navbar-nav > .active > a {
-  border-bottom: 3px solid #7FD9BA; }
-
-/*  Rotating Text */
-.cd-words-wrapper {
-  display: inline-block;
-  position: relative; }
-
-.cd-words-wrapper b {
-  display: inline-block;
-  position: absolute;
-  white-space: nowrap;
-  left: 0;
-  top: 0; }
-
-.cd-words-wrapper b.is-visible {
-  position: relative; }
-
 .no-js .cd-words-wrapper b {
   opacity: 0; }
 
 .no-js .cd-words-wrapper b.is-visible {
-  opacity: 1; }
-
-.cd-headline.clip span {
-  /* display: inline-block; */ }
-
-.cd-headline.clip .cd-words-wrapper {
-  overflow: hidden;
-  vertical-align: top; }
-
-.cd-headline.clip .cd-words-wrapper::after {
-  /* line */
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background-color: #fff; }
-
-.cd-headline.clip b {
-  opacity: 0; }
-
-.cd-headline.clip b.is-visible {
   opacity: 1; }
 
 .portafolio .items .caption {
