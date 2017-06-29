@@ -5,6 +5,11 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
 ****************************************************/
 @import 'style.scss';
 
+.title {
+  font-family: 'SF-KingstonRegular';
+  font-size: 5em;
+  color: #fff;
+}
 /*** HOME ***/
 
 header {
@@ -449,6 +454,33 @@ header {
           img {
             
           }
+        }
+      }
+    }
+  }
+}
+
+//
+.contact {
+  background-image: url(../images/bg-contact.jpg);
+  background-position: top center;
+  .shadow{
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    p {
+      max-width: 350px;
+      color: #fff;
+      letter-spacing: 1;
+      text-align: center;
+      line-height: 20px;
+      font-family: 'OpenSansLight';
+      a {
+        display: block;
+        color: inherit;
+        @include transition(all 0.65s ease);
+        &:hover {
+          color:$colorweb;
         }
       }
     }

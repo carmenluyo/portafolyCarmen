@@ -149,7 +149,6 @@ img {
   height: auto; }
 
 .bg-section {
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center; }
@@ -183,6 +182,11 @@ img {
   background-size: cover; }
 
 /****** meet ******/
+.title {
+  font-family: 'SF-KingstonRegular';
+  font-size: 5em;
+  color: #fff; }
+
 /*** HOME ***/
 header {
   -webkit-transition: all 0.5s ease-out;
@@ -575,5 +579,30 @@ header {
           display: block; }
         .habilidades .ctn-habl ul li a span {
           display: none; }
+
+.contact {
+  background-image: url(../images/bg-contact.jpg);
+  background-position: top center; }
+  .contact .shadow {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%; }
+    .contact .shadow p {
+      max-width: 350px;
+      color: #fff;
+      letter-spacing: 1;
+      text-align: center;
+      line-height: 20px;
+      font-family: 'OpenSansLight'; }
+      .contact .shadow p a {
+        display: block;
+        color: inherit;
+        -webkit-transition: all 0.65s ease;
+        -moz-transition: all 0.65s ease;
+        -ms-transition: all 0.65s ease;
+        -o-transition: all 0.65s ease;
+        transition: all 0.65s ease; }
+        .contact .shadow p a:hover {
+          color: #008891; }
 
 /*# sourceMappingURL=home.css.map */
