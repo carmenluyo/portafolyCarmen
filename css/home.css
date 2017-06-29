@@ -30,6 +30,8 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  *:focus {
+    outline: none; }
 
 html, body {
   height: 100%;
