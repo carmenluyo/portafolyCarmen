@@ -3,9 +3,13 @@
 
     function initialization(){
         $('#fullpage').fullpage({
-            sectionsColor: [''],
             menu: '#menu',
-            slidesNavigation: true,
+            anchors: ['home', 'portafolio', 'perfil', 'habilidades', 'contactame'],
+            navigation: false,
+            navigationTooltips: ['home', 'portafolio', 'perfil', 'habilidades', 'contactame'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
             loopHorizontal: false,
             responsiveWidth: 768
         });

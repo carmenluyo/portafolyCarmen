@@ -14,15 +14,16 @@
 	<body>
 		<div id="fullpage">
 			<!-- HOME -->
-			<section class="bg-section home section" id="home">
-				<header>
+			<section class="bg-section home section" data-anchor="home">
+				<header id="menu">
 					<div class="widthWeb">
 		        <nav>
-		          <ul id="menu-main-menu" class="reset list-unstyled menu-gral">
-		          	<li><a href="#">Portafolio</a></li>
-								<li><a href="#">perfil</a></li>
-								<li><a href="#">Servicios</a></li>
-								<li><a href="#">Contactame</a></li>
+		          <ul class="reset list-unstyled menu-gral">
+		          	<li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+		          	<li data-menuanchor="portafolio"><a href="#portafolio">Portafolio</a></li>
+								<li data-menuanchor="perfil"><a href="#perfil">perfil</a></li>
+								<li data-menuanchor="servicios"><a href="#servicios">Servicios</a></li>
+								<li data-menuanchor="contactame"><a href="#contactame">Contactame</a></li>
 							</ul>               
 		        </nav>
 		      </div>
@@ -55,15 +56,15 @@
 								</a>
 							</li>
 						</ul>
-						<a href="#" class="btn-portfolio">Portafolio</a>
-						<a href="#" class=" arrow btn-home"><i class="fa fa-angle-down"></i></a>  
+						<a href="#portafolio" class="btn-portfolio">Portafolio</a>
+						<a href="#portafolio" class=" arrow btn-home"><i class="fa fa-angle-down"></i></a>  
 					</div>
 				</div>
 			</section>
 		
 			<!-- PORTAFOLIO-->
 
-			<section class="section portafolio">
+			<section class="section portafolio" data-anchor="portafolio">
         <ul class="reset items">
           <li class="item">
             <a style="background-image: url('images/portafolio-amiljpg');" class="thumb" href="http://www.proyectoamil.org">
@@ -142,7 +143,7 @@
         </ul>
       </section>
 
-			<section class="perfil section">
+			<section class="perfil section" data-anchor="perfil">
 				<ul>
 					<li>
 						<img src="images/carmen_luyo.jpg" alt="">
@@ -151,10 +152,10 @@
 				</ul>	
 			</section>
 
-			<section class="habilidades section">
+			<section class="habilidades section" data-anchor="habilidades">
 				<div class="ctn-habl">
 					<ul>
-						<li> <span class="firth"> Habilidades</span></li>
+						<li> <h2 class="firth title"> Servicios</h2></li>
 						<li><a href="#"><span>Seo</span><img src="images/carmenluyo_seo.jpg" alt=""></a></li>
 						<li><a href="#"><span>Desarrollo Web </span><img src="images/carmenluyo_desarrolloweb.jpg" alt=""></a></li>
 						<li><a href="#"><span> Responsive</span><img src="images/carmenluyo_responsive.jpg" alt=""></a> </li>
@@ -165,7 +166,7 @@
 
 			</section>
 
-			<section class="contact section bg-section">
+			<section class="contact section bg-section" data-anchor="contact">
 				<div class="shadow flex-center ">
 					<h2 class="title">Contáctame</h2>
 					<p>
@@ -173,13 +174,28 @@
 						no dude en enviarme un correo electrónico:
 						<a href="mailto:c.luyorosales@gmail.com">e-mail: c.luyorosales@gmail.com</a>
 					</p>
+					<ul class="socialfooter">
+							<li>
+								<a href="https://pe.linkedin.com/in/carmenluyo" target="_blank">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://es.pinterest.com/carmenluyorosal/" target="_blank">
+									<i class="fa fa-pinterest"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/carmenluyo" target="_blank">
+									<i class="fa fa-github"></i>
+								</a>
+							</li>
+						</ul>
 				</div>
 			</section>
 			
 		</div>
 			
-			
-
 	  	<script src="js/jquery-3.1.0.min.js"></script>
 	  	<script src="js/jquery.fullPage.js"></script>
 	  	<script src="js/main.js"></script>

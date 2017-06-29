@@ -319,6 +319,35 @@ header {
         -o-transition: 1s;
         transition: 1s; }
 
+.socialfooter {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0px;
+  margin-top: 3%; }
+  .socialfooter li {
+    margin: 10px 0; }
+    .socialfooter li a {
+      text-align: center; }
+      .socialfooter li a i {
+        border-radius: 50%;
+        background-color: transparent;
+        margin: 0 7px;
+        font-size: 26px;
+        display: inline-block;
+        width: 51px;
+        height: 51px;
+        line-height: 51px;
+        color: #008891;
+        border: 1px solid #008891; }
+        .socialfooter li a i:hover {
+          background-color: #222222;
+          color: #ffffff;
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
+
 @media only screen and (min-width: 768px) {
   header nav {
     position: absolute;
@@ -543,6 +572,10 @@ header {
       width: 33.33333333333333%;
       height: 50%;
       overflow: hidden; }
+      .habilidades .ctn-habl ul li:nth-child(1) {
+        background-color: #008891;
+        text-align: center;
+        padding-top: 8%; }
       .habilidades .ctn-habl ul li a {
         position: relative;
         display: block;
@@ -584,7 +617,7 @@ header {
   background-image: url(../images/bg-contact.jpg);
   background-position: top center; }
   .contact .shadow {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.84);
     height: 100%;
     width: 100%; }
     .contact .shadow p {
