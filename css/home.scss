@@ -452,7 +452,6 @@ header {
           left: 0;
           height: 100%;
           z-index: 15;
-          overflow: hidden;
           &:hover {
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
@@ -482,7 +481,12 @@ header {
             display: block;
           }
           span {
-            display: none;
+    background-color: rgba(3,148,180,0.67);
+    color: #fff;
+    font-size: 1.4em;
+    padding: .8em 2em;
+    text-transform: uppercase;
+    text-align: center;
           }
           img {
             
