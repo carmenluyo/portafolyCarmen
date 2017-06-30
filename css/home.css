@@ -422,7 +422,11 @@ header {
       height: auto !important; }
   .thumb {
     width: 100%;
-    height: 250px; } }
+    height: 250px; }
+  .home {
+    height: 100% !important; }
+    .home .fp-tableCell {
+      height: 100% !important; } }
 
 @media screen and (max-width: 1024px) {
   header .right .btn-menu span > i {
@@ -449,11 +453,26 @@ header {
 
 .fix-img {
   position: absolute;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
   .fix-img img {
     width: 100%;
     height: 100%;
-    display: block; }
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -o-object-fit: cover;
+    object-fit: cover; }
 
 /* FIN DEL HEADER */
 .home .title-logo {
