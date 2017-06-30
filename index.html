@@ -173,7 +173,7 @@
 				<ul>
 					<li>
 						<div class="bg">
-							<img class="lazy" data-original="images/carmen_luyo.jpg" alt="">
+							<img class="lazy"  src="" data-src="images/carmen_luyo.jpg" alt="">
 						</div>
 						
 					</li>
@@ -195,11 +195,11 @@
 				<div class="ctn-habl">
 					<ul>
 						<li> <h2 class="firth title"> Habilidades </h2></li>
-						<li><a href="#"><span>Seo</span><img class="lazy" data-original="images/carmenluyo_seo.jpg" alt=""></a></li>
-						<li><a href="#"><span>Desarrollo Web </span><img class="lazy" data-original="images/carmenluyo_desarrolloweb.jpg" alt=""></a></li>
-						<li><a href="#"><span> Responsive</span><img class="lazy" data-original="images/carmenluyo_responsive.jpg" alt=""></a> </li>
-						<li><a href="#"><span>Quality Assurance </span><img class="lazy" data-original="images/carmenluyo_qa.jpg" alt=""></a></li>
-						<li><a href="#"><span>User experience</span><img class="lazy" data-original="images/carmenluyo_userexperience.jpg" alt=""></a></li>
+						<li><a href="#"><span>Seo</span><img class="lazy"  src="" data-src="images/carmenluyo_seo.jpg" alt=""></a></li>
+						<li><a href="#"><span>Desarrollo Web </span><img class="lazy"  src="" data-src="images/carmenluyo_desarrolloweb.jpg" alt=""></a></li>
+						<li><a href="#"><span> Responsive</span><img class="lazy"  src="" data-src="images/carmenluyo_responsive.jpg" alt=""></a> </li>
+						<li><a href="#"><span>Quality Assurance </span><img class="lazy"  src="" data-src="images/carmenluyo_qa.jpg" alt=""></a></li>
+						<li><a href="#"><span>User experience</span><img class="lazy"  src="" data-src="images/carmenluyo_userexperience.jpg" alt=""></a></li>
 					</ul>
 				</div>
 
@@ -237,8 +237,12 @@
 			
 	  	<script src="js/jquery-3.1.0.min.js"></script>
 	  	<script src="js/jquery.fullPage.js"></script>
-			<script type="text/javascript" src="/js/jquery.lazyload.js"> </script>
+			<script src="js/jquery.lazyload.js"> </script>
 	  	<script src="js/main.js"></script>
-
+			<script>
+				$("img.lazy").lazyload({
+				    effect : "fadeIn"
+				});
+			</script>
 	</body>
 </html>	
