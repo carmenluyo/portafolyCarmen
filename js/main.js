@@ -3,6 +3,7 @@
 
     function initialization(){
         $('#fullpage').fullpage({
+            resize: false,
             menu: '#menu',
             anchors: ['home', 'portafolio', 'perfil', 'habilidades', 'contactame'],
             navigation: false,
@@ -11,7 +12,7 @@
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
             loopHorizontal: false,
-            responsiveWidth: 768
+            responsive: 768
         });
     }
     initialization();

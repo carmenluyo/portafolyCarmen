@@ -7,40 +7,205 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
 
 .title {
   font-family: 'SF-KingstonRegular';
-  font-size: 5em;
   color: #fff;
 }
 /*** HOME ***/
 
+
 header {
-  transition: all 0.5s ease-out;
+  @include cleardiv;
+  @include transition(all 0.35s ease-in-out);
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 1500;
-  nav {
-    ul {
-      li {
-        a {
-          display: block;
+  
+  a {
+    color: black;
+  }
+  .right {
+    float: right;
+    nav {
+      ul {
+        margin-bottom: 0px;
+        li {
+          display: inline-block;
           position: relative;
-          color: #fff;
-          font-family: 'OpenSans';
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-size: 14px;
-          padding: 8px 15px;
-          transition: all 0.5s ease-out;
-          &:hover {
-            color:$colorweb;
+          vertical-align: middle;
+          a {
+            display: block;
+            position: relative;
+            color: #fff;
+            font-family: 'OpenSans';
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 8px 15px;
+            transition: all 0.5s ease-out;
+            &:hover {
+              color:$colorweb;
+            }
           }
+        } 
+      }
+    }
+  }
+  .mobile-icon {
+    display: inline-block;
+    width: 35px;
+    cursor:pointer;
+    position: fixed;
+    i {
+      height: 3px;
+      width: 100%;
+      background: white;
+      display: block;
+      margin-bottom: 3px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .menu-responsive {
+    width: 270px;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    z-index: 1002;
+    @include transition(right 0.45s ease);
+    ul {
+      list-style-type: none;
+      padding: 0;
+      padding-top: 35px;
+    }
+      .nav-logo {
+          text-align: center;
+          padding-top: 18%;
+          img {
+          width: 180px;
+          padding: 0;
+          margin: 0;
+          text-align: left;
+          display: block;
+          padding-left: 20px;
+          }
+      }
+      .close-nav {
+          position: absolute;
+          right: 50px;
+          float: right;
+          top: 64px;
+          cursor: pointer;
+          i {
+              width: 30px;
+              z-index: 999;
+              height: 3px;
+              position: absolute;
+              background-color: #fff;
+              &:nth-child(1) {
+              transform: rotate(45deg);
+              }
+              &:nth-child(2) {
+              transform: rotate(-45deg);
+              }
+          }
+      }
+  }
+  .active-menu {
+    right: 0;
+  }
+}
+
+
+
+.r-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  cursor: pointer;
+  @include transition(all 0.65s ease);
+  @include opacity(0);
+}
+.active-overlay {
+  visibility: visible;
+  @include opacity(0.5); 
+}
+
+/* MOBILE HEADER*/
+
+.btn-menu {
+  display: none;
+}
+
+@media screen and (max-width:769px) {
+  section.bg-section {
+    height: 100% !important;
+  }
+  .fp-section{
+    height: auto !important;
+    .fp-tableCell {
+      height: auto !important;
+    }
+  }  
+  .thumb {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+
+@media screen and (max-width:1024px) {
+  header {
+    .right {
+      .btn-menu {
+        span > i {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .btn-menu {
+    display: inline-block;
+    top: 30px;
+    right: 50px;
+    position: relative;
+  }
+  header .right {
+    > nav {
+      display: none;
+    }
+    > .menu-responsive {
+      display: block;
+      .nav-logo {
+        .logo {
+          font-size: 20px;
+          height: 73px;
+          line-height: 73px;
+        }
+      }
+      ul > li {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        a {
+          color: #3f3f3f;
         }
       }
     }
   }
 }
 
+/* FIN DEL HEADER */
 .home {
   background-image: url(../images/carmenluyo.jpg);
   .title-logo {
@@ -62,29 +227,8 @@ header {
       padding: 0% 8%;
 
       h1 {
-        font-size: 8em;
         font-weight: 100;
         color: white;
-      }
-
-      h2{
-        font-size: 3em;
-        color:#fff;
-        /*  Rotating Text */
-        .cd-words-wrapper {
-          display: inline-block;
-          position: relative;
-          b {
-            display: inline-block;
-            position: absolute;
-            white-space: nowrap;
-            left: 0;
-            top: 0;
-          }
-          b.is-visible {
-            position: relative;
-          }
-        }
       }
 
       .cd-headline.clip {
@@ -116,7 +260,6 @@ header {
         font-weight: 500;
         line-height: 1em;
         margin-bottom: 2%;
-        margin-top: 5%;
         background-color: transparent;
         border: 3px solid #fff;
         &:hover{
@@ -219,12 +362,146 @@ header {
 
 
 @media (min-width: 320px) {
-
+  .title {
+    font-size: 4em;
+  } 
+  .home {
+    .info {
+      span.text-resp {
+        display: block;
+        color: #fff;
+        font-size: 25px;
+        font-family: 'OpenSansLight';
+      }
+      h1 {
+        font-size: 52px;
+      }
+      h2 {
+        display: none;
+      }
+      .btn-portfolio {
+        margin-top: 25%;
+      }
+    }
+  }
+  .socialLinks {
+    display: none;
+  }
+  .perfil {
+    ul {
+      li {
+        width: 100%;
+        &:nth-child(2){
+          width: 100%;
+        }
+        bg > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .habilidades {
+    .ctn-habl {
+      li {
+        width: 100%;
+        height: 250px;
+        &:nth-child(1) {
+          width: 100%;
+          padding-bottom: 5%;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 
 @media only screen and (min-width: 768px) {
-
+  .title {
+    font-size: 5em;
+  } 
+  .home {
+    .info {
+      h1 {
+        font-size: 8em;
+      }
+      span.text-resp {
+        display: none;
+      }
+      h2{
+        font-size: 3em;
+        color:#fff;
+        display: block;
+        /*  Rotating Text */
+        .cd-words-wrapper {
+          display: inline-block;
+          position: relative;
+          b {
+            display: inline-block;
+            position: absolute;
+            white-space: nowrap;
+            left: 0;
+            top: 0;
+          }
+          b.is-visible {
+            position: relative;
+          }
+        }
+      }
+      .btn-portfolio {
+        margin-top: 5%;
+      }
+    }
+  }
+  .socialLinks {
+    display: block;
+  }
+  .perfil {
+    ul {
+      li {
+        &:nth-child(1) {
+          width: 60%;
+          .bg {
+            position: relative;
+            display: block;
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            z-index: 15;
+            img {
+              height: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 101%;
+              height: auto;
+              max-height: none;
+              max-width: none;
+              min-height: 100%;
+              min-width: 100%;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            }
+          }
+        }
+        &:nth-child(2) {
+          width: 40%;
+        }
+      }
+    }
+  }
+  .habilidades {
+    .ctn-habl {
+      ul {
+        li {
+          width: 33.33333333333333%;
+          height: 50%;
+        }
+      }
+    }
+  }
 }
 
 
@@ -232,7 +509,7 @@ header {
 
 .no-js .cd-words-wrapper b {
   opacity: 0;
-}
+};
 .no-js .cd-words-wrapper b.is-visible {
   opacity: 1;
 }
@@ -411,36 +688,7 @@ header {
 
     li {
       height: 100%;
-      &:nth-child(1) {
-        width: 60%;
-        .bg {
-          position: relative;
-          display: block;
-          top: 0;
-          width: 100%;
-          left: 0;
-          height: 100%;
-          z-index: 15;
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 101%;
-            height: auto;
-            max-height: none;
-            max-width: none;
-            min-height: 100%;
-            min-width: 100%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-          }
-        }
-        img {
-          height: 100%;
-        }
-      }
       &:nth-child(2) {
-        width: 40%;
         background-color: #5d6b6c;
         padding: 3%;
         display: flex;
@@ -470,8 +718,6 @@ header {
       justify-content: space-between;
       height: 100%;
       li {
-        width: 33.33333333333333%;
-        height: 50%;
         overflow: hidden;
         &:nth-child(1) {
           background-color: #008891;
