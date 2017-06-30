@@ -555,8 +555,8 @@ header {
   .perfil ul li:nth-child(2) {
     width: 40%; }
   .habilidades .ctn-habl ul li {
-    width: 33.33333333333333%;
-    height: 50%; } }
+    width: 33.33333333333333% !important;
+    height: 50% !important; } }
 
 .no-js .cd-words-wrapper b {
   opacity: 0; }
