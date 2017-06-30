@@ -205,9 +205,18 @@ header {
   }
 }
 
+.fix-img {
+  position: absolute;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
 /* FIN DEL HEADER */
 .home {
-  background-image: url(../images/carmenluyo.jpg);
+  
   .title-logo {
     font-family: 'SF-KingstonRegular';
   }
@@ -215,6 +224,7 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
     height: 100%;
     width: 100%;
+    position: relative;
     .info {
       display: block;
       position: absolute;
@@ -638,14 +648,32 @@ header {
     }
 }
 
-
-.thumb {
-      display: block;
-    background-position: center;
-    background-size: cover;
-    color: #fff;
+li {
+  overflow: hidden;
+  .thumb {
     position: relative;
-    overflow: hidden;
+    display: block;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    z-index: 15;
+    color:#fff;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 101%;
+      height: auto;
+      max-height: none;
+      max-width: none;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+}
+
 }
 .thumb:before {
     height: 0px;
@@ -802,4 +830,10 @@ header {
       }
     }
   }
+}
+
+li.lazy {
+  width: 700px; 
+  height: 467px; 
+  display: block;
 }
