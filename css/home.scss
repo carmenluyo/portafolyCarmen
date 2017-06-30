@@ -9,9 +9,109 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
   font-family: 'SF-KingstonRegular';
   color: #fff;
 }
+
+    /* Preloading Screen
+--------------------------------------- */
+    
+    #loader-wrapper-web {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+    }
+    
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $colorweb-hover;
+        z-index: 9999;
+        animation: spin 2s linear infinite;
+    }
+    
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $colorweb-hover;
+        animation: spin 3s linear infinite;
+    }
+    
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #EDE0C2;
+        animation: spin 1.5s linear infinite;
+    }
+    
+    #loader-wrapper-web .loader-section {
+        position: fixed;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(0, 136, 145, 0.67);
+        z-index: 1000;
+        transform: translateX(0);
+    }
+    
+    #loader-wrapper-web .loader-section.section-left {
+        left: 0;
+    }
+    
+    #loader-wrapper-web .loader-section.section-right {
+        right: 0;
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .loaded #loader-wrapper-web .loader-section.section-left {
+        transform: translateX(-100%);
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    
+    .loaded #loader-wrapper-web .loader-section.section-right {
+        transform: translateX(100%);
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    
+    .loaded #loader-wrapper-web {
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: all 0.3s 1s ease-out;
+    }
+
 /*** HOME ***/
-
-
 header {
   @include cleardiv;
   @include transition(all 0.35s ease-in-out);

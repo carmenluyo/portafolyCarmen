@@ -12,6 +12,17 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	</head>
 	<body>
+	 <div id="loader-wrapper-web">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+	 </div>
+	 <script>
+		 window.addEventListener("load", function () {
+		    document.body.className += " loaded ";
+		    document.getElementsByClassName("loader").style.opacity=0; 
+		}, false);
+	 </script>
 		<div id="fullpage">
 			<!-- HOME -->
 			<section class="home section" data-anchor="home">
