@@ -1,26 +1,3 @@
-/* Fonts */
-/* Regular */
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../fonts/OpenSans-Regular-webfont.eot");
-  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg"); }
-
-/* Light */
-@font-face {
-  font-family: 'OpenSansLight';
-  src: url("../fonts/OpenSans-Light-webfont.eot");
-  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg"); }
-
-/* Bold */
-@font-face {
-  font-family: 'OpenSansBold';
-  src: url("../fonts/OpenSans-Bold-webfont.eot");
-  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg"); }
-
-@font-face {
-  font-family: 'SF-KingstonRegular';
-  src: url("../fonts/SF-Kingston-Regular.otf"); }
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -35,48 +12,30 @@ body {
   position: relative;
   background-color: transparent; }
 
-/** apariencia de los botones en safari - compatibilidad **/
+/* Fonts */
+/* Regular */
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg"); }
+
+/* Light */
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg"); }
+
+@font-face {
+  font-family: 'SF-KingstonRegular';
+  src: url("../fonts/SF-Kingston-Regular.otf"); }
+
 /** clear **/
 .cleardiv:after, .cleardiv:before {
   content: "";
   display: block;
   clear: both; }
 
-/** text oculto con puntos suspensivos **/
-.hidetext {
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-/** texto centrado verticalmente - necesita un etiqueta padre con alto**/
-.centerinfovert {
-  display: table;
-  width: 100%;
-  height: 100%; }
-  .centerinfovert .tr {
-    display: table-row;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle; }
-    .centerinfovert .tr .td {
-      display: table-cell;
-      vertical-align: middle; }
-
-/** **/
-.icon-style {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-/** Placerholder **/
-/** flex **/
+/** texto centrado verticalmente **/
 .flex-center {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -99,6 +58,18 @@ body {
   align-items: center;
   -moz-align-items: center;
   -webkit-align-items: center; }
+
+/** **/
+.icon-style {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 @-webkit-keyframes spin {
   0% {
@@ -142,33 +113,35 @@ img {
   background-repeat: no-repeat;
   background-position: bottom center; }
 
-.container {
-  max-width: 1350px;
-  margin: 0 auto;
-  position: relative; }
-
-/* *******/
-.titulo-small {
-  font-family: 'marsha';
-  color: #008891; }
-
-@media only screen and (min-width: 320px) {
-  .titulo {
-    font-size: 75px;
-    width: 100%;
-    display: block;
-    font-family: 'SF-KingstonRegular';
-    color: #008891;
-    font-weight: 100; }
-  .titulo-small {
-    font-size: 35px; } }
-
 .bg-image {
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+
+.r-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.65s ease;
+  -moz-transition: all 0.65s ease;
+  -ms-transition: all 0.65s ease;
+  -o-transition: all 0.65s ease;
+  transition: all 0.65s ease;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.active-overlay {
+  visibility: visible;
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
 
 /*** HEADER ***/
 header {
@@ -276,31 +249,46 @@ header {
   header .active-menu {
     right: 0; }
 
-.r-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  z-index: 1001;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  cursor: pointer;
-  -webkit-transition: all 0.65s ease;
-  -moz-transition: all 0.65s ease;
-  -ms-transition: all 0.65s ease;
-  -o-transition: all 0.65s ease;
-  transition: all 0.65s ease;
-  opacity: 0;
-  filter: alpha(opacity=0); }
-
-.active-overlay {
-  visibility: visible;
-  opacity: 0.5;
-  filter: alpha(opacity=50); }
-
 /* MOBILE HEADER*/
 .btn-menu {
   display: none; }
+
+@media screen and (max-width: 1024px) {
+  header .right .btn-menu span > i {
+    background-color: #fff; }
+  .btn-menu {
+    display: inline-block;
+    top: 30px;
+    right: 50px;
+    position: relative; }
+  header .right > nav {
+    display: none; }
+  header .right > .menu-responsive {
+    display: block; }
+    header .right > .menu-responsive .nav-logo .logo {
+      font-size: 20px;
+      height: 73px;
+      line-height: 73px; }
+    header .right > .menu-responsive ul > li {
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid gray; }
+      header .right > .menu-responsive ul > li a {
+        color: #3f3f3f; } }
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    position: absolute;
+    float: right;
+    margin-right: -9px;
+    top: 39px;
+    display: block;
+    right: 47px; }
+    header nav ul.menu-gral > li {
+      display: inline-block;
+      position: relative;
+      -webkit-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out; } }
 
 /*# sourceMappingURL=style.css.map */
