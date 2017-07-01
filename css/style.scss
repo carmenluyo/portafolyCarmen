@@ -340,3 +340,67 @@ header {
   }
 }
 
+/************** WORK ***********************/
+
+
+.work {
+    .fullimg {
+        position: relative;
+        &.withCaption {}
+        .caption {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: absolute;
+            width: 100%;
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.47);
+            @media only screen and (max-width: 767px) {
+              font-size: 11px;
+            }
+            @media only screen and (min-width: 1366px) {
+                padding: 50px 100px;
+                font-weight: 200;
+                line-height: 33px;
+                font-size: 21px;
+            }
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        aside,
+        .righted {
+            height: 100%;
+            width: 50%;
+        }
+        aside {
+            position: fixed;
+            .fullimg {
+                height: 100%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        .righted {
+            margin-left: auto;
+            article {
+                i.bolder {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

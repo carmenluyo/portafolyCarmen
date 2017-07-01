@@ -268,6 +268,23 @@
 				$("img.lazy").lazyload({
 				    effect : "fadeIn"
 				});
+				$(document).ready(function() {
+    			function initialization() {
+	        $('#fullpage').fullpage({
+            resize: false,
+            menu: '#menu',
+            anchors: ['home', 'portafolio', 'perfil', 'habilidades', 'contactame'],
+            navigation: false,
+            navigationTooltips: ['home', 'portafolio', 'perfil', 'habilidades', 'contactame'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+            loopHorizontal: false,
+            responsive: 768
+	        });
+		    }
+		    initialization();
+				});
 			</script>
 	</body>
 </html>	

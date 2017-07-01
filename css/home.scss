@@ -550,8 +550,8 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
 }
 
 /*******ANIMATION********/
-
-.fp-viewing-portafolio .portafolio  ul.items li  {
+@media only screen and (min-width: 1024px) {
+  .fp-viewing-portafolio .portafolio  ul.items li  {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   &:nth-child(1) {
@@ -577,6 +577,8 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
     background-color: $colorweb;
   }
 }
+}
+
 
 
 /*** MEDIA QUERIES ***/
