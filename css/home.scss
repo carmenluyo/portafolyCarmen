@@ -298,9 +298,8 @@ DESCRIPCIÓN: HOJA DE ESTILOS PARA EL HOME PAGE
           @extend.img-cover;
         }
         .caption {
-          h3 {
-            font-family: 'OpenSansLight';
-          }
+          
+          font-family: 'OpenSansLight';
         }
       }
       &:last-child {

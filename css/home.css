@@ -575,7 +575,7 @@ header {
       transition: all 0.3s ease-in-out; }
     .portafolio .items .item .thumb img {
       position: absolute; }
-    .portafolio .items .item .thumb .caption h3 {
+    .portafolio .items .item .thumb .caption {
       font-family: 'OpenSansLight'; }
   .portafolio .items .item:last-child .thumb:after {
     display: none; }
