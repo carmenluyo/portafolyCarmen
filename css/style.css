@@ -143,6 +143,11 @@ img {
   opacity: 0.5;
   filter: alpha(opacity=50); }
 
+.fontRar {
+  color: #008891;
+  font-family: 'SF-KingstonRegular';
+  font-size: 40px; }
+
 /*** HEADER ***/
 header {
   -webkit-transition: all 0.35s ease-in-out;
@@ -218,7 +223,7 @@ header {
       padding-top: 35px; }
     header .menu-responsive .nav-logo {
       text-align: center;
-      padding-top: 18%; }
+      padding-top: 25%; }
       header .menu-responsive .nav-logo img {
         width: 180px;
         padding: 0;
@@ -230,14 +235,14 @@ header {
       position: absolute;
       right: 50px;
       float: right;
-      top: 64px;
+      top: 45px;
       cursor: pointer; }
       header .menu-responsive .close-nav i {
         width: 30px;
         z-index: 999;
         height: 3px;
         position: absolute;
-        background-color: #fff; }
+        background-color: #008891; }
         header .menu-responsive .close-nav i:nth-child(1) {
           -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
@@ -265,10 +270,6 @@ header {
     display: none; }
   header .right > .menu-responsive {
     display: block; }
-    header .right > .menu-responsive .nav-logo .logo {
-      font-size: 20px;
-      height: 73px;
-      line-height: 73px; }
     header .right > .menu-responsive ul > li {
       display: block;
       text-align: center;
