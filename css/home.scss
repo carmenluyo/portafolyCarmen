@@ -328,7 +328,6 @@ header {
           .caption {
               padding-left: 0;
               padding-bottom: 44px;
-              h3 {}
               span {
                   opacity: 1;
               }
@@ -375,7 +374,7 @@ header {
       }
     }
   }
-  li.item:nth-last-child{
+  li.item:nth-child(6){
     background-color: $colorweb;
     a {
       color: #fff;
@@ -423,6 +422,9 @@ header {
             }
         }
       }
+    }
+    li.item:nth-child(5) {
+      width: 50%;
     }
   }
   @media all and (min-width: 1024px) and (max-width: 1365px) {

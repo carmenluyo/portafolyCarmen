@@ -811,9 +811,9 @@ header .mobile-icon {
     margin: 0;
     text-transform: uppercase; }
 
-.portafolio li.item:nth-last-child {
+.portafolio li.item:nth-child(6) {
   background-color: #008891; }
-  .portafolio li.item:nth-last-child a {
+  .portafolio li.item:nth-child(6) a {
     color: #fff; }
 
 @media only screen and (min-width: 768px) {
@@ -863,7 +863,9 @@ header .mobile-icon {
           transform: scale(5); }
           .portafolio .items .item:last-child .caption .chevron:before {
             border-width: 0.14em 0.14em 0 0;
-            margin-left: -7px; } }
+            margin-left: -7px; }
+  .portafolio li.item:nth-child(5) {
+    width: 50%; } }
 
 @media all and (min-width: 1024px) and (max-width: 1365px) {
   .portafolio .items .item:last-child .caption {
