@@ -485,11 +485,18 @@ header {
         display: flex;
         .flex-center {
           p {
-          color: white;
-          font-size: 17px;
-          line-height: 22px;
-          text-align: justify;
-          font-family: 'OpenSansLight';
+            color: white;
+            font-size: 17px;
+            line-height: 22px;
+            text-align: justify;
+            font-family: 'OpenSansLight';
+            a {
+              color:#fff;
+              &:hover {
+                color:$colorweb;
+              }
+
+            }
           }
         }
       }

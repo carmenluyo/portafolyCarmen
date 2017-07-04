@@ -356,4 +356,116 @@ header {
       .work .righted article i.bolder {
         font-size: 17px; } }
 
+.section .slide {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right; }
+
+.section .slide .content {
+  background: white;
+  width: 500px;
+  height: 100vh;
+  display: table-cell;
+  text-align: center;
+  padding: 110px 25px 60px 75px;
+  vertical-align: middle; }
+
+.section .slide .content .price {
+  font-family: 'BaskervilleOldFace';
+  color: #e11b86;
+  font-size: 82px; }
+
+.section .slide .content .featured {
+  font-size: 0; }
+
+.section .slide .content .featured .item {
+  border: 1px solid #c5c5c6;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 15px 0;
+  text-align: center; }
+
+.section .slide .content .featured .item .icon {
+  color: #e11b86;
+  display: table-cell;
+  font-size: 28px;
+  height: 50px;
+  vertical-align: middle;
+  width: 105px; }
+
+.section .slide .content .featured .item .icon.icon-sqft {
+  font-size: 24px; }
+
+.section .slide .content .featured .item .name {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block; }
+
+.section .slide .content .address {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 25px 0; }
+
+.section .slide .content .description {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 30px; }
+
+.section .slide .content .description .viewDetails {
+  display: block;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+.section .slide .content .description .viewDetails a {
+  color: #333;
+  font-weight: 700; }
+
+.section .slide .content .viewAll {
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.section .slide .content .viewAll a {
+  color: #333;
+  font-weight: 700;
+  padding: 15px 45px;
+  border: 5px solid #d50a7c;
+  display: inline-block;
+  letter-spacing: 1px; }
+
+.section .slide .content .fp-slidesNav {
+  left: auto;
+  position: static;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  z-index: 4;
+  margin: 25px 0; }
+
+.section .slide .content .fp-slidesNav ul li {
+  height: auto;
+  margin: 0 3px;
+  width: auto; }
+
+.section .slide .content .fp-slidesNav ul li a {
+  padding: 3px;
+  border: 1px solid #aeaeae; }
+
+.section .slide .content .fp-slidesNav ul li a span {
+  border-radius: 0;
+  display: block;
+  height: 7px;
+  left: auto;
+  margin: 0;
+  position: static;
+  top: auto;
+  width: 41px;
+  background: none; }
+
+.section .slide .content .fp-slidesNav ul li a.active span {
+  background: #d71984; }
+
 /*# sourceMappingURL=style.css.map */
